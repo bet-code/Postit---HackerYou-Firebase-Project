@@ -31,22 +31,23 @@ class SignIn extends React.Component {
         firebase.auth()
         .signInWithEmailAndPassword(this.state.email, this.state.password)
             .then((data) => {
-                console.log(data)
+                console.log(data.user)
             })
         this.setState ({
             formType: ''
-        })
-        
+        })        
     }
     createAccount(e) {
         e.preventDefault();
         if(this.state.password === this.state.confirm) {
             firebase.auth()
             .createUserWithEmailAndPassword(this.state.email, this.state.password)
-                .then((res) =>{
-                    console.log(res)
+                .then((data) =>{
+                    console.log(data.user)
                 })
-                
+            this.setState ({
+                formType: ''
+            })                  
         }
     }
 
@@ -66,7 +67,7 @@ class SignIn extends React.Component {
         } // end of if statement      
         else if(this.state.formType === 'createAccount') {
             formToDisplay = (
-                <form className="signInForm" onSubmit={this.createAccount}>
+                <form className="createAccountForm" onSubmit={this.createAccount}>
                     <label htmlFor="email">Email Address</label>
                     <input type="email" placeholder="email" name="email" onChange={this.handleChange}/>
                     <label htmlFor="password">Password</label>
@@ -84,7 +85,7 @@ class SignIn extends React.Component {
                 <button className="signIn"onClick={this.formType}>Sign In</button>
                 <button className="createAccount" onClick={this.formType}>Create Account</button>
                 {formToDisplay}
-            </div>
+            </div> 
         )
     }
 }
