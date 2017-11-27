@@ -8,6 +8,7 @@ html {
 
 body {
     font-family: 'Crimson Text', serif;
+    height: 100vh;
 }
 
 h1, 
@@ -24,5 +25,4 @@ button {
 #app {
     background: linear-gradient(to top right, #2ecc71, #16a085 ,#1abc9c, #27ae60);
     width: 100%;
-    height: 100vh;
 }

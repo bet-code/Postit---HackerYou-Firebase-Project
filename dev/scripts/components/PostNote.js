@@ -5,7 +5,7 @@ const PostNote = (props) => {
         <li className="noteItem">
             <h2>{props.note.title}</h2>
             <p>{props.note.comment}</p>
-            <button onClick={() => props.delete(props.note.key)}><i className="fa fa-window-close"></i></button>
+            <button onClick={() => props.delete(props.note.key)}><i className="fa fa-times-circle" aria-hidden="true"></i></button>
         </li>
     )
 }
