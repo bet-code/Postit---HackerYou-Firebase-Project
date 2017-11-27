@@ -81,8 +81,8 @@ class App extends React.Component {
           <main>
             <section className="inputNotes">
               <form onSubmit={this.postNote}>
-                <input type="text" name='title' autoComplete="off" value={this.state.title} onChange={this.handleChange}/>
-                <textarea name="comment" autoComplete="off" cols="30" rows="10" value={this.state.comment} onChange={this.handleChange}></textarea>
+                <input type="text" name='title' autoComplete="off" placeholder="Enter Title" value={this.state.title} onChange={this.handleChange}/>
+                <textarea name="comment" autoComplete="off" placeholder="Enter comments..." cols="30" rows="10" value={this.state.comment} onChange={this.handleChange}></textarea>
                 <button>POST IT</button>
               </form>
             </section>

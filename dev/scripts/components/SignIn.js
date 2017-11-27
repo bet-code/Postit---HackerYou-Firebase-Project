@@ -58,9 +58,9 @@ class SignIn extends React.Component {
             formToDisplay = (
                 <form className="signInForm" onSubmit={this.signIn}>
                     <label htmlFor="email">Email</label>
-                    <input type="email" placeholder="email" name="email" onChange={this.handleChange}/>
+                    <input autoComplete="off" type="email" placeholder="email" name="email" onChange={this.handleChange}/>
                     <label htmlFor="password">Password</label>
-                    <input type="password" placeholder="password" name="password" onChange={this.handleChange}/>
+                    <input autoComplete="off" type="password" placeholder="password" name="password" onChange={this.handleChange}/>
                     <button>Log In</button>
                 </form>
             );//end of formToDisplay 
@@ -69,11 +69,11 @@ class SignIn extends React.Component {
             formToDisplay = (
                 <form className="createAccountForm" onSubmit={this.createAccount}>
                     <label htmlFor="email">Email Address</label>
-                    <input type="email" placeholder="email" name="email" onChange={this.handleChange}/>
+                    <input autoComplete="off" type="email" placeholder="email" name="email" onChange={this.handleChange}/>
                     <label htmlFor="password">Password</label>
-                    <input type="password" placeholder="password" name="password" onChange={this.handleChange}/>
+                    <input autoComplete="off" type="password" placeholder="password" name="password" onChange={this.handleChange}/>
                     <label htmlFor="confirm">Confirm Password</label>
-                    <input type="password" placeholder="confirm" name="confirm"onChange={this.handleChange}/>
+                    <input autoComplete="off" type="password" placeholder="confirm" name="confirm"onChange={this.handleChange}/>
                     <button>Create Account</button>
                 </form>
             ); //end of formToDisplay

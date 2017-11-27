@@ -18,9 +18,15 @@
         color: #f39c12;
         flex: 1;
         text-shadow: 0 0 5px #222;
+        @media (max-width: 720px) {
+            font-size: 3rem;
+        }
         span {
             font-size: 2.5rem;
             color: #f1c40f;
+            @media (max-width: 720px) {
+                display: none;
+            }
         }
     }
     button {
@@ -36,6 +42,9 @@
         border: none;
         position: relative;
         transition: background .3s ease, color .3s ease;
+        @media (max-width: 720px) {
+            padding: 5px 10px;
+        }
         &:hover {
             background: #ecf0f1;
             color: #7f8c8d;
@@ -74,12 +83,19 @@
     position: absolute;
     right: 0;
     bottom: -155%;
+    @media (max-width: 720px) {
+        bottom: -145%;
+    }
 }
 
 .createAccountForm {
     position: absolute;
     right: 0;
     bottom: -200%;
+    @media (max-width: 720px) {
+        bottom: -190%;
+    }
+    
 }
 
 
