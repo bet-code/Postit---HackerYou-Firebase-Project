@@ -7,17 +7,22 @@ html {
 }
 
 body {
-    font-style: $secondaryFont;
-    color: red;
+    font-family: 'Crimson Text', serif;
 }
 
-h1,
+h1, 
 button {
-    font-style: $primaryFont;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+button {
+    &:focus {
+        outline: none;
+    }
 }
 
 #app {
-    background: #2ecc71;
+    background: linear-gradient(to top right, #2ecc71, #16a085 ,#1abc9c, #27ae60);
     width: 100%;
     height: 100vh;
 }

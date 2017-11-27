@@ -80,7 +80,7 @@ class SignIn extends React.Component {
 
         return(
             <div className="signInPage">
-                <h1>Post-it Notes</h1>
+                <h1>Post-it <span>notes</span></h1>
                 <button className="signIn"onClick={this.formType}>Sign In</button>
                 <button className="createAccount" onClick={this.formType}>Create Account</button>
                 {formToDisplay}
